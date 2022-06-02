@@ -6,11 +6,21 @@ namespace MyStats
         public Form1()
         {
             InitializeComponent();
+            InitializeStudents();
             btn_Cancel.Click += ResizeText;
             btn_Cancel.Click += FinishEdit;
 
             btn_Save.Click += ResizeText;
             btn_Save.Click += FinishEdit;
+        }
+
+        private void InitializeStudents()
+        {
+            foreach (var item in pnl_Students.Controls)
+            {
+                if(item is Controls.Student student)
+                    student.CurrentForm = this;
+            }
         }
 
         string startingText = "";
@@ -30,20 +40,6 @@ namespace MyStats
             }
         }
 
-        private void ResizeContent(TextBox tBox)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Debug");
-        }
-
-        private void student5_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_AllExist_Click(object sender, EventArgs e)
         {
@@ -94,7 +90,7 @@ namespace MyStats
 
         private void rBtn_Teahcer_CheckedChanged(object sender, EventArgs e)
         {
-            pnl_Students.Enabled = true;   
+            pnl_LessonContent.Enabled = true;
         }
 
         private void lbl_MainTeacher_Click(object sender, EventArgs e)
@@ -105,6 +101,25 @@ namespace MyStats
         private void lbl_SwapTeacher_Click(object sender, EventArgs e)
         {
             rBtn_TempTeacher.Checked = true;
+        }
+
+        private void btn_AddMaterial_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Homework Successfully Added...");
+        }
+
+        private void tBox_Content_TextChanged(object sender, EventArgs e)
+        {
+            pnl_Students.Enabled = true;
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            if (tBox_Content.Text.Length != 0) {
+                pnl_Students.Enabled = true;
+                pnl_Labels.Enabled = true;
+            }
+            
         }
     }
 }

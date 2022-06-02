@@ -18,6 +18,8 @@ namespace MyStats.Controls
             Absent,Late,Exist
         }
 
+        public Form1 CurrentForm { get; set; }
+
         public Image ProfilePicture {
             get { return pic_Profile.Image; }
             set { pic_Profile.Image = value; }
@@ -67,9 +69,9 @@ namespace MyStats.Controls
                 {
                     if (cBox.Checked)
                     {
-                        var crystalCount = Convert.ToByte(Form1.lbl_CrystalCount.Text);
+                        var crystalCount = Convert.ToByte(CurrentForm.lbl_CrystalCount.Text);
                         if (crystalCount < Form1.MaxCrystalCount)
-                            Form1.lbl_CrystalCount.Text = 
+                            CurrentForm.lbl_CrystalCount.Text = 
                                 (crystalCount + 1).ToString();
                         
                         cBox.Checked = false;
@@ -81,14 +83,14 @@ namespace MyStats.Controls
 
         private void cBox_Crystal_Click(object sender, EventArgs e)
         {
-            int gemCount = Convert.ToInt32(Form1.lbl_CrystalCount.Text);
+            int gemCount = Convert.ToInt32(CurrentForm.lbl_CrystalCount.Text);
             int clickedNumber = Convert.ToInt32((sender as Guna2ImageCheckBox).Tag);
             int activationNumber = clickedNumber;
 
             if (clickedNumber < CurrentGemCount)
             {
                 activationNumber = clickedNumber;
-                Form1.lbl_CrystalCount.Text = (gemCount + (CurrentGemCount - clickedNumber)).ToString();
+                CurrentForm.lbl_CrystalCount.Text = (gemCount + (CurrentGemCount - clickedNumber)).ToString();
 
             }
             else if (clickedNumber > CurrentGemCount)
@@ -100,9 +102,11 @@ namespace MyStats.Controls
                     return;
                 }
 
-                if(CurrentGemCount != 0)
                 activationNumber = Math.Min(clickedNumber - CurrentGemCount, gemCount);
-                Form1.lbl_CrystalCount.Text = (gemCount - (activationNumber - CurrentGemCount)).ToString();
+                if (CurrentGemCount != 0)
+                    activationNumber += CurrentGemCount;
+
+                CurrentForm.lbl_CrystalCount.Text = (gemCount - (activationNumber - CurrentGemCount)).ToString();
             }
 
             ActivateCrystal(activationNumber);

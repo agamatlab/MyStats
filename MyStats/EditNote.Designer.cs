@@ -37,6 +37,7 @@
             // 
             // btn_Cancel
             // 
+            this.btn_Cancel.Animated = true;
             this.btn_Cancel.BorderRadius = 15;
             this.btn_Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -45,15 +46,17 @@
             this.btn_Cancel.FillColor = System.Drawing.Color.Red;
             this.btn_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_Cancel.Location = new System.Drawing.Point(22, 131);
+            this.btn_Cancel.Location = new System.Drawing.Point(19, 98);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(116, 40);
+            this.btn_Cancel.Size = new System.Drawing.Size(102, 30);
             this.btn_Cancel.TabIndex = 0;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Save
             // 
+            this.btn_Save.Animated = true;
             this.btn_Save.BorderRadius = 15;
             this.btn_Save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -62,49 +65,54 @@
             this.btn_Save.FillColor = System.Drawing.Color.LimeGreen;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Location = new System.Drawing.Point(169, 131);
+            this.btn_Save.Location = new System.Drawing.Point(148, 98);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(116, 40);
+            this.btn_Save.Size = new System.Drawing.Size(102, 30);
             this.btn_Save.TabIndex = 0;
             this.btn_Save.Text = "Save";
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // tBox_Description
             // 
-            this.tBox_Description.Location = new System.Drawing.Point(22, 38);
+            this.tBox_Description.Location = new System.Drawing.Point(19, 28);
+            this.tBox_Description.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tBox_Description.Multiline = true;
             this.tBox_Description.Name = "tBox_Description";
-            this.tBox_Description.Size = new System.Drawing.Size(263, 73);
+            this.tBox_Description.Size = new System.Drawing.Size(231, 56);
             this.tBox_Description.TabIndex = 1;
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(26, -1);
+            this.guna2Separator1.Location = new System.Drawing.Point(23, -1);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(250, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(219, 9);
             this.guna2Separator1.TabIndex = 2;
             // 
             // guna2Separator2
             // 
             this.guna2Separator2.FillThickness = 3;
-            this.guna2Separator2.Location = new System.Drawing.Point(35, 182);
+            this.guna2Separator2.Location = new System.Drawing.Point(31, 136);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(250, 12);
+            this.guna2Separator2.Size = new System.Drawing.Size(219, 9);
             this.guna2Separator2.TabIndex = 2;
             // 
             // EditNote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(307, 194);
+            this.ClientSize = new System.Drawing.Size(269, 146);
             this.Controls.Add(this.guna2Separator2);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.tBox_Description);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.btn_Cancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditNote";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

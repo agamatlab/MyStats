@@ -143,6 +143,16 @@ namespace MyStats.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jafar_PP {
             get {
                 object obj = ResourceManager.GetObject("Jafar PP", resourceCulture);
